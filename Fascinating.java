@@ -48,6 +48,6 @@ public class Fascinating {
         System.out.print("Enter a number: ");
         int num = Integer.parseInt(br.readLine());
         Fascinating ob = new Fascinating();
-        System.out.println(ob.isFascinating(num));
+        System.out.println(ob.isFascinating(num) ? "It is a fascinating number." : "It is not a fascinating number");
     }
 }
