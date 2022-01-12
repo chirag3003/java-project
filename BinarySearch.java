@@ -30,7 +30,7 @@ class BinarySearch {
     }
 
     void SearchName() throws IOException {
-        System.out.println("Enter the name to be searched: ");
+        System.out.print("Enter the name to be searched: ");
         String toSearch = br.readLine();
         int first = 0;
         int last = len - 1;
