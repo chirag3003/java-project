@@ -60,7 +60,7 @@ class Rearrange {
             Cxt = Txt + "Y";
         } else {
             boolean containsVowel = false;
-            for (int i = 1; i < Txt.length(); i++) {
+            for (int i = 1; i < Len; i++) {
                 if (isVowel(Txt.charAt(i))) {
                     containsVowel = true;
                     Cxt = Txt.substring(i) + Txt.substring(0, i) + "C";
