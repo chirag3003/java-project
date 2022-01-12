@@ -53,17 +53,10 @@ class BinarySearch {
         }
     }
 
-    void PrintNames() {
-        for (int i = 0; i < len; i++) {
-            System.out.println(names[i]);
-        }
-    }
-
     public static void main(String[] args) throws IOException {
         BinarySearch obj = new BinarySearch();
-        obj.accept();
-        obj.SortAccepted();
-        obj.SearchName();
-        // obj.PrintNames();
+        obj.accept(); // accept the names from the user
+        obj.SortAccepted(); // sort the names alphabetically
+        obj.SearchName(); // accept a name to be searched and check if the names is present in the list
     }
 }
