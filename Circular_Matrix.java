@@ -1,10 +1,10 @@
-import java.util.*;
+import java.io.*;
 
 class Circular_Matrix {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String args[]) throws IOException {
         System.out.print("Enter the number of rows and columns : ");
-        int n = sc.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine().trim());
 
         int A[][] = new int[n][n];
         int k = 1, c1 = 0, c2 = n - 1, r1 = 0, r2 = n - 1;
