@@ -21,9 +21,9 @@ public class PrimeNumber {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter a number: ");
+        System.out.print("Enter a number: ");
         int num = Integer.parseInt(br.readLine());
         PrimeNumber ob = new PrimeNumber(num);
-        System.out.println(ob.isPrime(num - 1));
+        System.out.println(ob.isPrime(num - 1) ? "It's a Prime Number." : "It is not a Prime Number");
     }
 }
