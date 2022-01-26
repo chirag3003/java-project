@@ -1,6 +1,7 @@
 import java.io.*;
 
 public class Factorial {
+    
     int factorial(int num) {
         if (num < 2) {
             return 1;
