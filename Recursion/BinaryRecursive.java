@@ -1,6 +1,12 @@
 import java.io.*;
 
 class BinaryRecursive {
+    int[] arr;
+
+    BinaryRecursive(int[] ar) {
+        arr = ar;
+    }
+
     int binarySearch(int arr[], int l, int r, int toSearch) {
 
         if (r >= l && l <= arr.length - 1) { // if statement to check if the element is present in the array
@@ -16,9 +22,24 @@ class BinaryRecursive {
         return -1;
     }
 
+    void SortAccepted() {
+
+        for (int i = arr.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int swap = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = swap;
+                }
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+
     public static void main(String args[]) throws IOException {
 
-        BinaryRecursive ob = new BinaryRecursive(); // creating an object of this class
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // creating a buffered reader object
                                                                                   // to accept input from the user
         System.out.print("Enter the number of elements: ");
@@ -29,6 +50,8 @@ class BinaryRecursive {
         for (int i = 0; i < len; i++) {
             arr[i] = Integer.parseInt(br.readLine()); // taking user input for the elements of the array
         }
+        BinaryRecursive ob = new BinaryRecursive(arr); // creating an object of this class
+        ob.SortAccepted(); // sorting the user input in ascending order
         System.out.print("Enter the number to be searched: ");
         int toSearch = Integer.parseInt(br.readLine()); // accepting the element to be searched from the user
         int result = ob.binarySearch(arr, 0, len - 1, toSearch); // running the binary search function defined in the
@@ -37,6 +60,6 @@ class BinaryRecursive {
         if (result == -1)
             System.out.println("Element not present");
         else
-            System.out.println("Element found at index " + result);
+            System.out.println("Element found ");
     }
 }
