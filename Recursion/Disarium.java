@@ -1,6 +1,6 @@
 
 /**
- * A disarium number is a number in which the sum of the digits to the power of
+ *he fu A disarium number is a number in which the sum of the digits to the power of
  * their respective position is equal to the number itself.
  * Example: 135 = 1^1+ 3^2 + 5^3
  * Hence, 135 is a disarium number.
@@ -26,7 +26,7 @@
  * 
  * Specify the class Disarium giving the details of the constructor( ), void
  * countDigit( ), int sumofDigits(int, int) and void check( ). Define the main(
- * ) function to create an object and call the functions accordingly to enable
+ * ) function to create an object and call tnctions accordingly to enable
  * the task.
  * 
  * 
