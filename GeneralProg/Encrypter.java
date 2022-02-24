@@ -1,4 +1,3 @@
-package GeneralProg;
 
 import java.util.*;
 

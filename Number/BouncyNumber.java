@@ -11,6 +11,7 @@ Write a program in java to accept a number. Check and display whether it is a Bo
 import java.io.*;
 
 public class BouncyNumber {
+    // checks if if the first two digits are in ascending order or not
     static boolean isAscending(String num) {
         if (num.length() < 2)
             return true;
@@ -21,7 +22,9 @@ public class BouncyNumber {
         return second > first;
     }
 
+    // checks if the number is bouncy or not
     boolean isBouncy(String num) {
+        // any number with less than 3 digits can not be a bouncy number
         if (num.length() < 3)
             return false;
         boolean ascending = isAscending(num);
@@ -43,7 +46,7 @@ public class BouncyNumber {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter a number: ");
-        String num = br.readLine();
+        String num = br.readLine(); // accepts the number from the user
         BouncyNumber ob = new BouncyNumber();
         System.out.println(ob.isBouncy(num) ? "It is a Bouncy Number" : "It is not a Bouncy Number");
     }

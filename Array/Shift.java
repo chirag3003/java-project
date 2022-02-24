@@ -30,6 +30,7 @@ public class Shift {
         mat = new int[m][n];
     }
 
+    // take inputs from the and store them in any array(mat[][])
     void input() {
         System.out.println("Enter elements");
         for (int i = 0; i < m; i++)
@@ -37,6 +38,7 @@ public class Shift {
                 mat[i][j] = sc.nextInt();
     }
 
+    // display the elements the in the matrix(mat[][])
     void display() {
         for (int i = 0; i < m; i++) {
             System.out.println();
@@ -46,6 +48,7 @@ public class Shift {
         System.out.println();
     }
 
+    // shift hte elements in the array
     void cyclic(Shift P) {
         for (int i = 0; i < m; i++)
             for (int j = 0; j < n; j++) {
@@ -62,8 +65,8 @@ public class Shift {
         x.input();
         y.cyclic(x);
         System.out.println("Initial array is ");
-        x.display();
+        x.display(); // display the array without shift
         System.out.print("Array after the shift ");
-        y.display();
+        y.display(); // display the array after shift
     }
 }

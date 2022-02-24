@@ -41,6 +41,7 @@ class Rearrange {
         Len = 0;
     }
 
+    // accepts input from the user
     public void readword() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the String");
@@ -48,6 +49,7 @@ class Rearrange {
         Len = Txt.length();
     }
 
+    // checks if a letter is a vowel or not
     static boolean isVowel(char l) {
         if (l == 'A' || l == 'E' || l == 'I' || l == 'O' || l == 'U') {
             return true;
@@ -55,6 +57,7 @@ class Rearrange {
         return false;
     }
 
+    // converts the string
     public void convert() {
         if (isVowel(Txt.charAt(0))) {
             Cxt = Txt + "Y";
@@ -73,6 +76,7 @@ class Rearrange {
         }
     }
 
+    // displays the original and the converted string
     public void display() {
         System.out.println("The original string is " + Txt);
         System.out.println(" The new String is " + Cxt);
@@ -80,8 +84,8 @@ class Rearrange {
 
     public static void main(String[] args) throws IOException {
         Rearrange obj = new Rearrange();
-        obj.readword();
-        obj.convert();
-        obj.display();
+        obj.readword(); // accepts the string from the user
+        obj.convert(); // converts the string
+        obj.display(); // displays the original and the converted string
     }
 }

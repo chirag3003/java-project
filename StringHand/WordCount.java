@@ -1,4 +1,3 @@
-package StringHand;
 
 /**
  * Define a class WordCount to count the number of words in a given sentence

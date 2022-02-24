@@ -43,16 +43,19 @@ public class Disarium {
         size = 0;
     }
 
+    // calculates the number of digits in the number
     void countDigit() {
         size = String.valueOf(num).length();
     }
 
+    // calculates the sum of digits in the number
     int sumofDigits(int n, int p) {
         if (n == 0)
             return 0;
         return ((int) Math.pow(n % 10, p)) + sumofDigits(n / 10, p - 1);
     }
 
+    // checks if the number is disarium or not
     void check() {
         if (num == sumofDigits(num, size)) {
             System.out.println("disarium");
@@ -64,8 +67,7 @@ public class Disarium {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter a number");
-        Disarium obj = new Disarium(Integer.parseInt(br.readLine()));
-
+        Disarium obj = new Disarium(Integer.parseInt(br.readLine())); // accepts the number from the user
         obj.countDigit();
         obj.check();
     }

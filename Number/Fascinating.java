@@ -15,6 +15,7 @@ It could be observed that '192384576' consists of all digits from 1 to 9 exactly
 import java.io.*;
 
 public class Fascinating {
+    // finds the products of the number and joins them
     static String concatProducts(int num) {
         String sum = "";
         for (int i = 1; i <= 3; i++) {
@@ -23,6 +24,7 @@ public class Fascinating {
         return sum;
     }
 
+    // counts the times every digit has been used in the joined number
     static int[] countDigits(String number) {
         int[] digits = new int[10];
         for (int i = 0; i < number.length(); i++) {
@@ -31,6 +33,7 @@ public class Fascinating {
         return digits;
     }
 
+    // checks if the number is fascinating or not
     boolean isFascinating(int num) {
         String number = concatProducts(num);
         int digits[] = countDigits(number);
@@ -44,7 +47,7 @@ public class Fascinating {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter a number: ");
-        int num = Integer.parseInt(br.readLine());
+        int num = Integer.parseInt(br.readLine()); // accepts input from the user
         Fascinating ob = new Fascinating();
         System.out.println(ob.isFascinating(num) ? "It is a fascinating number." : "It is not a fascinating number");
     }
