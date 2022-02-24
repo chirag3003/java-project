@@ -11,8 +11,6 @@ Consider the number 192
 192 x 3 = 576
 Concatenating the results: 192 384 576
 It could be observed that '192384576' consists of all digits from 1 to 9 exactly once. Hence, it could be concluded that 192 is a Fascinating Number. Some examples of fascinating Numbers are: 192, 219, 273, 327, 1902, 1920, 2019 etc.
-
-33
 */
 import java.io.*;
 
