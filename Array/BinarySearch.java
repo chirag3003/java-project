@@ -1,31 +1,31 @@
 import java.io.*;
 
 class BinarySearch {
-    String[] names;
-    int len;
+    String[] var_names;
+    int var_len;
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     // accepts user input
     void accept() throws IOException {
         System.out.print("Enter the number of names: ");
-        len = Integer.parseInt(br.readLine());
-        names = new String[len];
+        var_len = Integer.parseInt(br.readLine());
+        var_names = new String[var_len];
         System.out.println("Enter the names:-");
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < var_len; i++) {
             System.out.print((i + 1) + ": ");
-            names[i] = br.readLine(); // accepting the names to be stored in the array
+            var_names[i] = br.readLine(); // accepting the names to be stored in the array
         }
     }
 
     // sorting the names alphabetically
     void SortAccepted() {
-        for (int i = len - 1; i > 0; i--) {
+        for (int i = var_len - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
-                int diff = names[j].compareTo(names[j + 1]);
-                if (diff > 0) {
-                    String swap = names[j + 1];
-                    names[j + 1] = names[j];
-                    names[j] = swap;
+                int var_diff = var_names[j].compareTo(var_names[j + 1]);
+                if (var_diff > 0) {
+                    String swap = var_names[j + 1];
+                    var_names[j + 1] = var_names[j];
+                    var_names[j] = swap;
                 }
             }
         }
@@ -34,24 +34,24 @@ class BinarySearch {
     void SearchName() throws IOException {
         System.out.print("Enter the name to be searched: ");
         String toSearch = br.readLine(); // accepting the name to be searched
-        int first = 0;
-        int last = len - 1;
+        int var_first = 0;
+        int var_last = var_len - 1;
         // while loop to execute binary search
-        while (first <= last) {
-            int mid = (first + last) / 2; // calculating the position of the middle element
-            int diff = toSearch.compareTo(names[mid]);
-            if (diff == 0) {
+        while (var_first <= var_last) {
+            int var_mid = (var_first + var_last) / 2; // calculating the position of the middle element
+            int var_diff = toSearch.compareTo(var_names[var_mid]);
+            if (var_diff == 0) {
                 System.out.println("Name found ");
                 // printing the position of the name if found in the array
-                System.out.println((mid + 1) + ": " + toSearch);
+                System.out.println((var_mid + 1) + ": " + toSearch);
                 break;
-            } else if (diff < 0) {
-                last = mid - 1;
+            } else if (var_diff < 0) {
+                var_last = var_mid - 1;
             } else {
-                first = mid + 1;
+                var_first = var_mid + 1;
             }
         }
-        if (first > last) {
+        if (var_first > var_last) {
             System.out.println("Name not found");
         }
     }

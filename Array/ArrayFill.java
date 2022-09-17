@@ -39,36 +39,36 @@ class ArrayFill {
     public static void main(String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the size N where 3 < N < 10 ");
-        int N = Integer.parseInt(br.readLine());
-        if (N > 3 && N < 10) {
-            char M[][] = new char[N][N];
+        int var_N = Integer.parseInt(br.readLine());
+        if (var_N > 3 && var_N < 10) {
+            char var_M[][] = new char[var_N][var_N];
 
             System.out.print("FIRST CHARACTER: ");
-            char c1 = br.readLine().charAt(0);
+            char var_c1 = br.readLine().charAt(0);
             System.out.print("SECOND CHARACTER: ");
-            char c2 = br.readLine().charAt(0);
+            char var_c2 = br.readLine().charAt(0);
             System.out.print("THIRD CHARACTER: ");
-            char c3 = br.readLine().charAt(0);
+            char var_c3 = br.readLine().charAt(0);
 
-            for (int i = 0; i < N; i++) {
-                for (int j = 0; j < N; j++) {
+            for (int i = 0; i < var_N; i++) {
+                for (int j = 0; j < var_N; j++) {
                     // fill corners with char 1
-                    if ((i == 0 || i == N - 1) && (j == 0 || j == N - 1))
-                        M[i][j] = c1;
+                    if ((i == 0 || i == var_N - 1) && (j == 0 || j == var_N - 1))
+                        var_M[i][j] = var_c1;
                     // fill non-corner boundary elements with char 2
-                    else if (i == 0 || j == 0 || i == N - 1 || j == N - 1)
-                        M[i][j] = c2;
+                    else if (i == 0 || j == 0 || i == var_N - 1 || j == var_N - 1)
+                        var_M[i][j] = var_c2;
                     // fill rest with char 3
                     else
-                        M[i][j] = c3;
+                        var_M[i][j] = var_c3;
                 }
             }
 
             // print the array
             System.out.println("");
-            for (int i = 0; i < N; i++) {
-                for (int j = 0; j < N; j++) {
-                    System.out.print(M[i][j] + "\t");
+            for (int i = 0; i < var_N; i++) {
+                for (int j = 0; j < var_N; j++) {
+                    System.out.print(var_M[i][j] + "\t");
                 }
                 System.out.println();
             }

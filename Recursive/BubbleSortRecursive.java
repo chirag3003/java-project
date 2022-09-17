@@ -1,22 +1,22 @@
 class BubbleSortRecursive {
     // sorts the array which is passed as the paramter
-    void sort(int[] arr, int n, int end) {
+    void sort(int[] var_arr, int var_n, int var_end) {
         // ends the execution when n is equal to end
-        if (n == end)
+        if (var_n == var_end)
             return;
 
         // swaps the number in correct order
-        if (arr[n] > arr[n + 1]) {
-            int swap = arr[n];
-            arr[n] = arr[n + 1];
-            arr[n + 1] = swap;
+        if (var_arr[var_n] > var_arr[var_n + 1]) {
+            int swap = var_arr[var_n];
+            var_arr[var_n] = var_arr[var_n + 1];
+            var_arr[var_n + 1] = swap;
         }
 
         // calls the function again to sort the remaining part
-        if (n == end - 1) {
-            sort(arr, 0, end - 1);
+        if (var_n == var_end - 1) {
+            sort(var_arr, 0, var_end - 1);
         } else {
-            sort(arr, n + 1, end);
+            sort(var_arr, var_n + 1, var_end);
         }
     }
 }

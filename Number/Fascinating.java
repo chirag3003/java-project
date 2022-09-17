@@ -16,29 +16,29 @@ import java.io.*;
 
 public class Fascinating {
     // finds the products of the number and joins them
-    static String concatProducts(int num) {
-        String sum = "";
+    static String concatProducts(int var_num) {
+        String var_sum = "";
         for (int i = 1; i <= 3; i++) {
-            sum += Integer.toString(num * i);
+            var_sum += Integer.toString(var_num * i);
         }
-        return sum;
+        return var_sum;
     }
 
     // counts the times every digit has been used in the joined number
-    static int[] countDigits(String number) {
-        int[] digits = new int[10];
-        for (int i = 0; i < number.length(); i++) {
-            ++digits[Integer.parseInt(number.charAt(i) + "")];
+    static int[] countDigits(String var_number) {
+        int[] var_digits = new int[10];
+        for (int i = 0; i < var_number.length(); i++) {
+            ++var_digits[Integer.parseInt(var_number.charAt(i) + "")];
         }
-        return digits;
+        return var_digits;
     }
 
     // checks if the number is fascinating or not
-    boolean isFascinating(int num) {
-        String number = concatProducts(num);
-        int digits[] = countDigits(number);
+    boolean isFascinating(int var_num) {
+        String var_number = concatProducts(var_num);
+        int[] var_digits = countDigits(var_number);
         for (int i = 1; i < 10; i++) {
-            if (digits[i] != 1)
+            if (var_digits[i] != 1)
                 return false;
         }
         return true;
@@ -47,8 +47,8 @@ public class Fascinating {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter a number: ");
-        int num = Integer.parseInt(br.readLine()); // accepts input from the user
+        int var_num = Integer.parseInt(br.readLine()); // accepts input from the user
         Fascinating ob = new Fascinating();
-        System.out.println(ob.isFascinating(num) ? "It is a fascinating number." : "It is not a fascinating number");
+        System.out.println(ob.isFascinating(var_num) ? "It is a fascinating number." : "It is not a fascinating number");
     }
 }

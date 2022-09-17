@@ -31,22 +31,22 @@
 import java.io.*;
 
 class Rearrange {
-    String Txt;
-    String Cxt;
-    int Len;
+    String var_Txt;
+    String var_Cxt;
+    int var_Len;
 
     public Rearrange() {
-        Txt = "";
-        Cxt = "";
-        Len = 0;
+        var_Txt = "";
+        var_Cxt = "";
+        var_Len = 0;
     }
 
     // accepts input from the user
     public void readword() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the String");
-        Txt = br.readLine().trim().toUpperCase();
-        Len = Txt.length();
+        var_Txt = br.readLine().trim().toUpperCase();
+        var_Len = var_Txt.length();
     }
 
     // checks if a letter is a vowel or not
@@ -59,27 +59,27 @@ class Rearrange {
 
     // converts the string
     public void convert() {
-        if (isVowel(Txt.charAt(0))) {
-            Cxt = Txt + "Y";
+        if (isVowel(var_Txt.charAt(0))) {
+            var_Cxt = var_Txt + "Y";
         } else {
             boolean containsVowel = false;
-            for (int i = 1; i < Len; i++) {
-                if (isVowel(Txt.charAt(i))) {
+            for (int i = 1; i < var_Len; i++) {
+                if (isVowel(var_Txt.charAt(i))) {
                     containsVowel = true;
-                    Cxt = Txt.substring(i) + Txt.substring(0, i) + "C";
+                    var_Cxt = var_Txt.substring(i) + var_Txt.substring(0, i) + "C";
                     break;
                 }
             }
             if (!containsVowel) {
-                Cxt = Txt + "N";
+                var_Cxt = var_Txt + "N";
             }
         }
     }
 
     // displays the original and the converted string
     public void display() {
-        System.out.println("The original string is " + Txt);
-        System.out.println(" The new String is " + Cxt);
+        System.out.println("The original string is " + var_Txt);
+        System.out.println(" The new String is " + var_Cxt);
     }
 
     public static void main(String[] args) throws IOException {

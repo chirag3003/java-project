@@ -2,43 +2,43 @@ import java.util.*;
 
 public class SortArray {
 
-    String[] arr;
-    int len;
+    String[] var_arr;
+    int var_len;
 
     // accepts the input from the user
     void acceptArray() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of words: ");
-        len = sc.nextInt(); // accepting the length of the array from the user
-        arr = new String[len];
+        var_len = sc.nextInt(); // accepting the length of the array from the user
+        var_arr = new String[var_len];
         System.out.println("Enter the words one by one");
-        for (int i = 0; i < len; i++) {
-            arr[i] = sc.next();
+        for (int i = 0; i < var_len; i++) {
+            var_arr[i] = sc.next();
         }
 
     }
 
     // sorting the array using selection sort
     void sortArray() {
-        for (int i = 0; i < len - 1; i++) {
+        for (int i = 0; i < var_len - 1; i++) {
             int p = i;
-            for (int j = i + 1; j < len; j++) {
-                if (arr[j].compareToIgnoreCase(arr[p]) < 0) {
+            for (int j = i + 1; j < var_len; j++) {
+                if (var_arr[j].compareToIgnoreCase(var_arr[p]) < 0) {
                     p = j;
                 }
             }
             if (p != i) {
-                String swap = arr[i];
-                arr[i] = arr[p];
-                arr[p] = swap;
+                String swap = var_arr[i];
+                var_arr[i] = var_arr[p];
+                var_arr[p] = swap;
             }
         }
     }
 
     // displaying the elements of the array
     void displayArray() {
-        for (int i = 0; i < len; i++) {
-            System.out.print(arr[i] + "\t");
+        for (int i = 0; i < var_len; i++) {
+            System.out.print(var_arr[i] + "\t");
         }
         System.out.println();
     }

@@ -1,38 +1,38 @@
 public class Queue {
-    int[] arr = new int[100];
-    int rear = 0;
-    int front = 0;
-    int size;
+    int[] var_arr = new int[100];
+    int var_rear = 0;
+    int var_front = 0;
+    int var_size;
 
-    Queue(int size) {
-        this.size = size;
+    Queue(int var_size) {
+        this.var_size = var_size;
     }
 
-    void addEle(int num) {
-        if (rear < size) {
-            arr[++rear] = num;
+    void addEle(int var_num) {
+        if (var_rear < var_size) {
+            var_arr[++var_rear] = var_num;
             return;
         }
         System.out.println("Overflow");
     }
 
     int delEle() {
-        if (rear == front) {
+        if (var_rear == var_front) {
             System.out.println("Underflow");
-            front = 0;
-            rear = 0;
+            var_front = 0;
+            var_rear = 0;
             return -9999;
         }
-        return arr[++front];
+        return var_arr[++var_front];
     }
 
     void display() {
-        if (front == rear) {
+        if (var_front == var_rear) {
             System.out.println("Empty");
             return;
         }
-        for (int i = front + 1; i <= rear; i++) {
-            System.out.println(arr[i]);
+        for (int i = var_front + 1; i <= var_rear; i++) {
+            System.out.println(var_arr[i]);
         }
     }
 

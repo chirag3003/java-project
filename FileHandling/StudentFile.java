@@ -8,8 +8,8 @@ public class StudentFile {
         DataOutputStream data = new DataOutputStream(file);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter the number of students: ");
-        int num = Integer.parseInt(br.readLine()); // accept the number of students
-        for (int i = 0; i < num; i++) {
+        int var_num = Integer.parseInt(br.readLine()); // accept the number of students
+        for (int i = 0; i < var_num; i++) {
             System.out.print("Student " + (i + 1) + ":");
             data.writeChars(br.readLine() + "\n"); // write the name in the file
         }

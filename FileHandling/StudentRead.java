@@ -6,13 +6,13 @@ public class StudentRead {
     public static void main(String[] args) throws IOException {
         FileReader file = new FileReader("students.txt");
         BufferedReader br = new BufferedReader(file);
-        int c = 0; // counter to count the number of students
+        int var_c = 0; // counter to count the number of students
         while (true) {
-            String text = br.readLine();
-            if (text == null)
+            String var_text = br.readLine();
+            if (var_text == null)
                 break; // break the loop after reaching the end of the file
-            c++; // increase the number of names;
-            System.out.println("Student " + c + ": " + text);
+            var_c++; // increase the number of names;
+            System.out.println("Student " + var_c + ": " + var_text);
         }
     }
 }

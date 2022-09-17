@@ -35,29 +35,29 @@
 import java.io.*;
 
 public class Disarium {
-    int num;
-    int size;
+    int var_num;
+    int var_size;
 
-    Disarium(int nn) {
-        num = nn;
-        size = 0;
+    Disarium(int var_num) {
+        this.var_num = var_num;
+        var_size = 0;
     }
 
     // calculates the number of digits in the number
     void countDigit() {
-        size = String.valueOf(num).length();
+        var_size = String.valueOf(var_num).length();
     }
 
     // calculates the sum of digits in the number
-    int sumofDigits(int n, int p) {
-        if (n == 0)
+    int sumofDigits(int var_n, int var_p) {
+        if (var_n == 0)
             return 0;
-        return ((int) Math.pow(n % 10, p)) + sumofDigits(n / 10, p - 1);
+        return ((int) Math.pow(var_n % 10, var_p)) + sumofDigits(var_n / 10, var_p - 1);
     }
 
     // checks if the number is disarium or not
     void check() {
-        if (num == sumofDigits(num, size)) {
+        if (var_num == sumofDigits(var_num, var_size)) {
             System.out.println("disarium");
         } else
             System.out.println("not a disarium");

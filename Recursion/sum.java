@@ -14,17 +14,17 @@ import java.io.*;
 
 class sum {
     // calculates the sum of the factors
-    int add(int num, int r) {
-        if (r > num / 2) {
+    int add(int var_num, int r) {
+        if (r > var_num / 2) {
             // returns 0 if r is out of range
             return 0;
         }
-        if (num % r == 0) { // checks if r is a factor of num or not
+        if (var_num % r == 0) { // checks if r is a factor of num or not
             // adds r if it is a factor and then moves on to the next number
-            return r + add(num, r + 1);
+            return r + add(var_num, r + 1);
         } else {
             // directly moves on to the next number if r is not factor
-            return add(num, r + 1);
+            return add(var_num, r + 1);
         }
     }
 
@@ -32,9 +32,9 @@ class sum {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         sum ob = new sum();
         System.out.print("Enter a Number: ");
-        int num = Integer.parseInt(br.readLine()); // accepts the number from the user
+        int var_num = Integer.parseInt(br.readLine()); // accepts the number from the user
         // prints the sum of the factors
-        System.out.println("The sum of the factors is: " + ob.add(num, 1));
+        System.out.println("The sum of the factors is: " + ob.add(var_num, 1));
 
     }
 }
