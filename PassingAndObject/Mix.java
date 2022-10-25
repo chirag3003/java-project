@@ -19,7 +19,7 @@ public class Mix {
         String var_wrd1 = P.var_wrd;
         String var_wrd2 = Q.var_wrd;
         int minLen = Math.min(var_wrd1.length(), var_wrd2.length());
-        for (int i = 0; i < minLen; i++) {
+        for (int var_i = 0; var_i < minLen; var_i++) {
             var_wrd += var_wrd1.charAt(0) + "" + var_wrd2.charAt(0);
             var_wrd1 = var_wrd1.substring(1);
             var_wrd2 = var_wrd2.substring(1);

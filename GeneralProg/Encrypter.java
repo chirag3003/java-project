@@ -9,8 +9,8 @@ public class Encrypter {
         int var_n = var_str.length();
         String var_res = ""; // stores the message after encrytion or decryption
         // for loops to extract every character in the string
-        for (int i = 0; i < var_n; i++) {
-            char var_ca = var_str.charAt(i);
+        for (int var_i = 0; var_i < var_n; var_i++) {
+            char var_ca = var_str.charAt(var_i);
             int var_cv = (int) var_ca;
             // changes ascii value to encrypt or decrypt the character
             if ((var_cv > 64 && var_cv < 78) || (var_cv > 96 && var_cv < 110)) {

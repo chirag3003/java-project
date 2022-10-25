@@ -19,15 +19,17 @@ class BubbleSortRecursive {
             sort(var_arr, var_n + 1, var_end);
         }
     }
-}
 
-/*
- * 
- * public static void main(String[] args) {
- * int[] arr = { 3, 1, 24, 6, 2, 5, 3, 10 };
- * new BubbleSortRecursive().sort(arr, 0, arr.length - 1);
- * for (int i = 0; i < arr.length; i++) {
- * System.out.println(arr[i]);
- * }
- * }
- */
+    public static void main(String[] args) {
+        int[] var_arr = { 3, 1, 24, 6, 2, 5, 3, 10 };
+        System.out.println("The array before sorting is: ");
+        for (int var_i = 0; var_i < var_arr.length; var_i++) {
+            System.out.println(var_arr[var_i]);
+        }
+        new BubbleSortRecursive().sort(var_arr, 0, var_arr.length - 1);
+        System.out.println("The array after sorting is: ");
+        for (int var_i = 0; var_i < var_arr.length; var_i++) {
+            System.out.println(var_arr[var_i]);
+        }
+    }
+}

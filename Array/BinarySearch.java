@@ -19,13 +19,13 @@ class BinarySearch {
 
     // sorting the names alphabetically
     void SortAccepted() {
-        for (int i = var_len - 1; i > 0; i--) {
-            for (int j = 0; j < i; j++) {
-                int var_diff = var_names[j].compareTo(var_names[j + 1]);
+        for (int var_i = var_len - 1; var_i > 0; var_i--) {
+            for (int var_j = 0; var_j < var_i; var_j++) {
+                int var_diff = var_names[var_j].compareTo(var_names[var_j + 1]);
                 if (var_diff > 0) {
-                    String swap = var_names[j + 1];
-                    var_names[j + 1] = var_names[j];
-                    var_names[j] = swap;
+                    String swap = var_names[var_j + 1];
+                    var_names[var_j + 1] = var_names[var_j];
+                    var_names[var_j] = swap;
                 }
             }
         }

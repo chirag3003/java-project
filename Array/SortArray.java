@@ -20,16 +20,16 @@ public class SortArray {
 
     // sorting the array using selection sort
     void sortArray() {
-        for (int i = 0; i < var_len - 1; i++) {
-            int p = i;
-            for (int j = i + 1; j < var_len; j++) {
-                if (var_arr[j].compareToIgnoreCase(var_arr[p]) < 0) {
-                    p = j;
+        for (int var_i = 0; var_i < var_len - 1; var_i++) {
+            int p = var_i;
+            for (int var_j = var_i + 1; var_j < var_len; var_j++) {
+                if (var_arr[var_j].compareToIgnoreCase(var_arr[p]) < 0) {
+                    p = var_j;
                 }
             }
-            if (p != i) {
-                String swap = var_arr[i];
-                var_arr[i] = var_arr[p];
+            if (p != var_i) {
+                String swap = var_arr[var_i];
+                var_arr[var_i] = var_arr[p];
                 var_arr[p] = swap;
             }
         }
@@ -37,8 +37,8 @@ public class SortArray {
 
     // displaying the elements of the array
     void displayArray() {
-        for (int i = 0; i < var_len; i++) {
-            System.out.print(var_arr[i] + "\t");
+        for (int var_i = 0; var_i < var_len; var_i++) {
+            System.out.print(var_arr[var_i] + "\t");
         }
         System.out.println();
     }

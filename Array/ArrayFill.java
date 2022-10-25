@@ -66,9 +66,9 @@ class ArrayFill {
 
             // print the array
             System.out.println("");
-            for (int i = 0; i < var_N; i++) {
-                for (int j = 0; j < var_N; j++) {
-                    System.out.print(var_M[i][j] + "\t");
+            for (int var_i = 0; var_i < var_N; var_i++) {
+                for (int var_j = 0; var_j < var_N; var_j++) {
+                    System.out.print(var_M[var_i][var_j] + "\t");
                 }
                 System.out.println();
             }

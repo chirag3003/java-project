@@ -1,4 +1,4 @@
-// import java.util.Scanner;
+import java.util.Scanner;
 
 public class BinarySearchRecursive {
     int[] var_arr; // The array in the which the element is to be searched
@@ -29,27 +29,26 @@ public class BinarySearchRecursive {
 
         return search(var_start, var_end);
     }
-}
 
-/*
- * public static void main(String[] args) {
- * Scanner sc = new Scanner(System.in);
- * System.out.print("Enter the size of the array: ");
- * int n = sc.nextInt();
- * System.out.println("Enter the elements of the array:- ");
- * int[] arr = new int[n];
- * for (int i = 0; i < n; i++) {
- * System.out.print("Index " + i + ": ");
- * arr[i] = sc.nextInt();
- * }
- * System.out.print("Enter the element to be searched: ");
- * int toSearch = sc.nextInt();
- * BinarySearchRecursive obj = new BinarySearchRecursive(arr, toSearch);
- * int index = obj.search(0, arr.length - 1);
- * if (index == -1) {
- * System.out.println("The Element is not present in the array");
- * } else {
- * System.out.println("The Element is present at index: " + index);
- * }
- * }
- */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int var_n = sc.nextInt();
+        System.out.println("Enter the elements of the array:- ");
+        int[] var_arr = new int[var_n];
+        for (int var_i = 0; var_i < var_n; var_i++) {
+            System.out.print("Index " + var_i + ": ");
+            var_arr[var_i] = sc.nextInt();
+        }
+        System.out.print("Enter the element to be searched: ");
+        int var_toSearch = sc.nextInt();
+        BinarySearchRecursive obj = new BinarySearchRecursive(var_arr, var_toSearch);
+        int var_index = obj.search(0, var_arr.length - 1);
+        if (var_index == -1) {
+            System.out.println("The Element is not present in the array");
+        } else {
+            System.out.println("The Element is present at index: " + var_index);
+        }
+    }
+
+}

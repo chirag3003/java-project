@@ -28,13 +28,13 @@ public class BouncyNumber {
         if (var_num.length() < 3)
             return false;
         boolean var_ascending = isAscending(var_num);
-        for (int i = 2; i < var_num.length(); i++) {
-            if (var_num.charAt(i) != var_num.charAt(i - 1)) {
+        for (int var_i = 2; var_i < var_num.length(); var_i++) {
+            if (var_num.charAt(var_i) != var_num.charAt(var_i - 1)) {
                 if (var_ascending) {
-                    if (Integer.parseInt(var_num.charAt(i) + "") < Integer.parseInt(var_num.charAt(i - 1) + ""))
+                    if (Integer.parseInt(var_num.charAt(var_i) + "") < Integer.parseInt(var_num.charAt(var_i - 1) + ""))
                         return true;
                 } else {
-                    if (Integer.parseInt(var_num.charAt(i) + "") > Integer.parseInt(var_num.charAt(i - 1) + ""))
+                    if (Integer.parseInt(var_num.charAt(var_i) + "") > Integer.parseInt(var_num.charAt(var_i - 1) + ""))
                         return true;
                 }
             }

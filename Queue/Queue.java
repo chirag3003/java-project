@@ -44,11 +44,11 @@ public class Queue {
         // Adding elements
         System.out.println("Adding Elements");
         ob.addEle(3);
-        ob.addEle(3);
-        ob.addEle(3);
-        ob.addEle(3);
+        ob.addEle(4);
+        ob.addEle(5);
+        ob.addEle(6);
         // Adding extra element to show case of overflow
-        ob.addEle(3);
+        ob.addEle(7);
         // Displaying elements after adding elements
         System.out.println("Elements: ");
         ob.display();

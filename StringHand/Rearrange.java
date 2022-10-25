@@ -63,10 +63,10 @@ class Rearrange {
             var_Cxt = var_Txt + "Y";
         } else {
             boolean containsVowel = false;
-            for (int i = 1; i < var_Len; i++) {
-                if (isVowel(var_Txt.charAt(i))) {
+            for (int var_i = 1; var_i < var_Len; var_i++) {
+                if (isVowel(var_Txt.charAt(var_i))) {
                     containsVowel = true;
-                    var_Cxt = var_Txt.substring(i) + var_Txt.substring(0, i) + "C";
+                    var_Cxt = var_Txt.substring(var_i) + var_Txt.substring(0, var_i) + "C";
                     break;
                 }
             }

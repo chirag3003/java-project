@@ -18,8 +18,8 @@ public class Fascinating {
     // finds the products of the number and joins them
     static String concatProducts(int var_num) {
         String var_sum = "";
-        for (int i = 1; i <= 3; i++) {
-            var_sum += Integer.toString(var_num * i);
+        for (int var_i = 1; var_i <= 3; var_i++) {
+            var_sum += Integer.toString(var_num * var_i);
         }
         return var_sum;
     }
@@ -27,8 +27,8 @@ public class Fascinating {
     // counts the times every digit has been used in the joined number
     static int[] countDigits(String var_number) {
         int[] var_digits = new int[10];
-        for (int i = 0; i < var_number.length(); i++) {
-            ++var_digits[Integer.parseInt(var_number.charAt(i) + "")];
+        for (int var_i = 0; var_i < var_number.length(); var_i++) {
+            ++var_digits[Integer.parseInt(var_number.charAt(var_i) + "")];
         }
         return var_digits;
     }
@@ -37,8 +37,8 @@ public class Fascinating {
     boolean isFascinating(int var_num) {
         String var_number = concatProducts(var_num);
         int[] var_digits = countDigits(var_number);
-        for (int i = 1; i < 10; i++) {
-            if (var_digits[i] != 1)
+        for (int var_i = 1; var_i < 10; var_i++) {
+            if (var_digits[var_i] != 1)
                 return false;
         }
         return true;

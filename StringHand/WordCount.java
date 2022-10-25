@@ -12,8 +12,8 @@ public class WordCount {
         String var_sen = sc.nextLine(); // accepts a sentence from the user
         int var_count = var_sen.length() > 0 ? 1 : 0;
         // loops over every character in the senetence to find the words
-        for (int i = 1; i < var_sen.length(); i++) {
-            if (var_sen.charAt(i) == ' ' && var_sen.charAt(i - 1) != ' ') {
+        for (int var_i = 1; var_i < var_sen.length(); var_i++) {
+            if (var_sen.charAt(var_i) == ' ' && var_sen.charAt(var_i - 1) != ' ') {
                 var_count++;
             }
         }

@@ -9,8 +9,8 @@ public class StudentFile {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter the number of students: ");
         int var_num = Integer.parseInt(br.readLine()); // accept the number of students
-        for (int i = 0; i < var_num; i++) {
-            System.out.print("Student " + (i + 1) + ":");
+        for (int var_i = 0; var_i < var_num; var_i++) {
+            System.out.print("Student " + (var_i + 1) + ":");
             data.writeChars(br.readLine() + "\n"); // write the name in the file
         }
         data.close();

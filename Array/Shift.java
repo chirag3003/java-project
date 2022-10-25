@@ -32,29 +32,29 @@ public class Shift {
     // take inputs from the and store them in any array(mat[][])
     void input() {
         System.out.println("Enter elements");
-        for (int i = 0; i < var_m; i++)
-            for (int j = 0; j < var_n; j++)
-                var_mat[i][j] = sc.nextInt();
+        for (int var_i = 0; var_i < var_m; var_i++)
+            for (int var_j = 0; var_j < var_n; var_j++)
+                var_mat[var_i][var_j] = sc.nextInt();
     }
 
     // display the elements the in the matrix(mat[][])
     void display() {
-        for (int i = 0; i < var_m; i++) {
+        for (int var_i = 0; var_i < var_m; var_i++) {
             System.out.println();
-            for (int j = 0; j < var_n; j++)
-                System.out.print(var_mat[i][j] + "\t");
+            for (int var_j = 0; var_j < var_n; var_j++)
+                System.out.print(var_mat[var_i][var_j] + "\t");
         }
         System.out.println();
     }
 
     // shift hte elements in the array
     void cyclic(Shift P) {
-        for (int i = 0; i < var_m; i++)
-            for (int j = 0; j < var_n; j++) {
-                if (i != 0)
-                    var_mat[i - 1][j] = P.var_mat[i][j];
+        for (int var_i = 0; var_i < var_m; var_i++)
+            for (int var_j = 0; var_j < var_n; var_j++) {
+                if (var_i != 0)
+                    var_mat[var_i - 1][var_j] = P.var_mat[var_i][var_j];
                 else
-                    var_mat[var_m - 1][j] = P.var_mat[0][j];
+                    var_mat[var_m - 1][var_j] = P.var_mat[0][var_j];
             }
     }
 
